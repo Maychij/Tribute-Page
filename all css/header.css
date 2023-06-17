@@ -48,7 +48,7 @@
     background: none;
     border: 0;
     box-sizing: content-box;
-    color: inherit;
+    color:rgb(0, 0, 0);
     cursor: pointer;
     font: inherit;
     line-height: inherit;
@@ -61,7 +61,7 @@
 }
 
 #globalheader :focus {
-    outline: 4px solid rgba(0,125,250,.6);
+    outline: 4px solid rgba(4, 4, 4, 0.6);
     outline-offset: 1px
 }
 
@@ -119,12 +119,6 @@ html,body {
     user-select: none;
     -webkit-backdrop-filter: var(--globalnav-backdrop-filter);
     backdrop-filter: var(--globalnav-backdrop-filter)
-}
-
-#globalnav.globalnav-dark,.globalheader-dark #globalnav,.theme-dark #globalnav {
-    --r-globalnav-color: rgba(255, 255, 255, .8);
-    --r-globalnav-color-secondary: #E8E8ED;
-    --r-globalnav-color-hover: #FFFFFF
 }
 
 #globalnav.globalnav-light,.globalheader-dark #globalnav.globalnav-light,.theme-dark #globalnav.globalnav-light,.globalheader-light #globalnav,.theme-light #globalnav {
@@ -225,7 +219,6 @@ html,body {
 
 .globalnav-curtain {
     background: rgba(232,232,237,.4);
-    -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     visibility: hidden;
     position: fixed;
@@ -239,29 +232,6 @@ html,body {
     z-index: 9998;
     transition: opacity .32s cubic-bezier(.4,0,.6,1) 80ms,visibility .32s step-end 80ms
 }
-
-#globalnav.globalnav-dark .globalnav-curtain,.globalheader-dark .globalnav-curtain,.theme-dark .globalnav-curtain {
-    background: rgba(0,0,0,.4)
-}
-
-.globalnav-dark~.globalnav-curtain {
-    background: rgba(0,0,0,.4)
-}
-
-#globalnav.globalnav-light .globalnav-curtain,.globalheader-dark #globalnav.globalnav-light .globalnav-curtain,.theme-dark #globalnav.globalnav-light .globalnav-curtain,.globalheader-light .globalnav-curtain,.theme-light .globalnav-curtain {
-    background: rgba(232,232,237,.4)
-}
-
-.globalnav-light~.globalnav-curtain {
-    background: rgba(232,232,237,.4)
-}
-
-.globalnav-with-flyout-open~.globalnav-curtain {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity .32s cubic-bezier(.4,0,.6,1) 80ms,visibility .32s step-start 80ms
-}
-
 .globalnav-block-transitions~.globalnav-curtain {
     animation: none!important;
     transition: none!important

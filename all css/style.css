@@ -1,0 +1,25 @@
+/* animated properties */
+#messages #messageContainer article {
+    position: static;
+    opacity: 1;
+}
+#messages #messageContainer article:first-child {
+   position: absolute;
+   opacity: 0;
+}
+
+footer {
+    opacity: 1;
+    height: 228px;
+}
+
+#messages #messageContainer {
+    height: 2200px;
+}
+
+
+/* header transitions and animations */
+#messages #messagesHeader #headerDescription,
+#messages #messagesHeader #viewMessages {
+    opacity: 0;
+}

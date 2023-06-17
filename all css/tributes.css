@@ -1,0 +1,174 @@
+/* Per message article styling */
+
+#main {
+    margin-bottom: 40px;
+}
+#messageContainer article {
+    width: 540px;
+}
+article.message {
+    font-family: 'Helvetica Neue', Helvetica, 'Lucida Grande', 'Lucida Sans Unicode', Arial, Verdana, sans-serif;
+    padding-bottom: 50px;
+}
+article.message h1 {
+    font-size: 16px;
+    margin-bottom: 0px;
+    line-height: 1.5;
+    padding-bottom: 5px;
+}
+article.message p,
+article.message div{
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+article.message p.author {
+    font-size: 14px;
+    color: #999;
+}
+.template {
+    display: none;
+}
+
+/* static styles */
+#messages #content {
+    margin-bottom: 5px;
+}
+#messages #messagesHeader {
+    padding: 100px 0px 60px 0px;
+    text-align: center;
+    border-bottom: 1px solid #CFCFCF;
+    width: 790px;
+    margin: auto;
+}
+#messages #messagesHeader h1 {
+    margin-bottom: 8px;
+}
+#messages #messagesHeader #headerDescription {
+    font-size: 18px;
+    line-height: 1.55;
+    padding-bottom: 10px;
+}
+#messages #messagesHeader #emailCallout {
+    font-size: 14px;
+    line-height: 1.5;
+}
+#messages #messagesHeader #emailCallout span{
+    color: #333;
+    white-space: nowrap;
+}
+
+#messages #messagesHeader #viewMessages .more {
+    font-size: 18px;
+    padding-right: 18px;
+    background-image: url(/stevejobs/images/downarrow.png);
+}
+#messages .animateHeader #messagesHeader #viewMessages .more {
+    pointer-events: none;
+    cursor: default;
+}
+#messages #messageContainer {
+    margin: 0 100px;
+    padding: 50px 120px;
+    overflow: hidden;
+    position: relative;
+}
+
+#messages .animateMessageContainer #messageContainer article {
+    overflow: hidden;
+}
+
+#messages #messageContainer #mask{
+    position: absolute;
+    z-index: 1;
+    background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 15%, rgba(255,255,255,1) 92%, rgba(255,255,255,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(15%,rgba(255,255,255,0)), color-stop(92%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,1)));
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 15%,rgba(255,255,255,1) 92%,rgba(255,255,255,1) 100%);
+    background: -o-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 15%,rgba(255,255,255,1) 92%,rgba(255,255,255,1) 100%);
+    background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 15%,rgba(255,255,255,1) 92%,rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+    background: linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 15%,rgba(255,255,255,1) 92%,rgba(255,255,255,1) 100%);
+    pointer-events: none;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+}
+
+footer {
+    margin-bottom: 50px;
+    margin:  auto;
+    width: 780px;
+    text-align: center;
+}
+footer h1 {
+    border-top: 1px solid #CFCFCF;
+    padding-top: 50px;
+    margin-bottom: 16px;
+}
+footer p {
+    font-size: 15px;
+    line-height: 1.4;
+}
+#iphone-footer {
+   display: none;
+}
+/* ipad styling */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    #messages #messageContainer {
+        margin: 0;
+    }
+    #messageContainer .message {
+        width: 720px;
+    }
+    article.message p,
+    article.message div,
+    article.message p.author{
+        font-size: 20px;
+    }
+    article.message h1 {
+        font-size: 20px;
+    }
+    #messages #messagesHeader #emailCallout {
+        font-size: 18px;
+    }
+}
+
+/* iphone */
+@media only screen and (max-device-width: 480px) {
+    #messages #messageContainer {
+        margin: 0;
+    }
+    #messageContainer .message {
+        width: 720px;
+    }
+    article.message h1 {
+        font-size: 30px;
+        padding-bottom: 5px;
+    }
+	article.message p,
+    article.message div{
+        font-size: 28px;
+    }
+    article.message p.author{
+        font-size: 28px;
+    }
+    #messages #messagesHeader #emailCallout {
+        padding-top: 20px;
+        font-size: 26px;
+    }
+    #messages header #viewMessages .more {
+        font-size: 22px;
+    }
+
+    footer {
+        border-top: 1px solid #CFCFCF;
+        padding-top: 50px;
+    }
+    footer #footer-text,
+    footer h1{
+        display: none;
+    }
+    footer #iphone-footer {
+        display: block;
+    }
+}
